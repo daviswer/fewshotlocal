@@ -1,8 +1,8 @@
 # Few-Shot Learning with Localization in Realistic Settings
 
 Code for the CVPR 2019 paper [Few-Shot Learning with Localization in Realistic Settings](https://arxiv.org/abs/1904.08502). 
-Due to the sheer number of independent moving parts and user-defined parameters, we are providing our scripts as a series of 
-interactive Jupyter notebooks. 
+Due to the sheer number of independent moving parts and user-defined parameters, we are providing our code as a series of 
+interactive Jupyter notebooks rather than automated Python scripts. 
 
 ## Setup
 
