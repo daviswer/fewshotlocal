@@ -35,5 +35,6 @@ Because two versions of localization exist, we use ‘0’ to indicate no locali
 ‘1’ for few-shot localization, and ‘2’ for unsupervised localization. 
 A ‘*’ indicates a model presented in the main paper.
 
-
-<img src="https://raw.githubusercontent.com/daviswer/fewshotlocal/master/results.png" width="300">
+<p align="center>
+<img src="https://raw.githubusercontent.com/daviswer/fewshotlocal/master/results.png" width="450">
+                                                                                                 </p>
