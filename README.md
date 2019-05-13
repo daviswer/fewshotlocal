@@ -36,4 +36,4 @@ Because two versions of localization exist, we use ‘0’ to indicate no locali
 A ‘*’ indicates a model presented in the main paper.
 
 
-![Figure lifted shamelessly from the Supplementary Materials](<img src="https://github.com/daviswer/fewshotlocal/blob/master/results.png" width="600">)
+![Figure lifted shamelessly from the Supplementary Materials](https://raw.githubusercontent.com/daviswer/fewshotlocal/master/results.png?v=4&s=300)
