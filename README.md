@@ -30,9 +30,10 @@ The default parameters for the evaluation code match those for the training code
 
 Three-digit model names indicate the presence or absence of batch folding, localization, and covariance pooling, in that order. 
 For example, ‘101’ indicates a model with batch folding and covariance pooling, but no localization. 
+'000' is a standard prototypical network. 
 Because two versions of localization exist, we use ‘0’ to indicate no localization,
 ‘1’ for few-shot localization, and ‘2’ for unsupervised localization. 
 A ‘*’ indicates a model presented in the main paper.
 
-![Figure lifted shamelessly from the Supplementary Materials]
-(https://raw.githubusercontent.com/daviswer/fewshotlocal/master/results.png)
+
+![Figure lifted shamelessly from the Supplementary Materials](https://raw.githubusercontent.com/daviswer/fewshotlocal/master/results.png)
