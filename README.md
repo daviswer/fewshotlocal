@@ -36,5 +36,5 @@ Because two versions of localization exist, we use ‘0’ to indicate no locali
 A ‘*’ indicates a model presented in the main paper.
 
 <p align="center>
-<img src="https://raw.githubusercontent.com/daviswer/fewshotlocal/master/results.png" width="450">
-                                                                                                 </p>
+          <img src="https://raw.githubusercontent.com/daviswer/fewshotlocal/master/results.png" width="450">
+</p>
