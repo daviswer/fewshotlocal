@@ -6,7 +6,9 @@ interactive Jupyter notebooks rather than automated Python scripts.
 
 ## Setup
 
-This code requires Pytorch and torchvision 1.0.0 or higher with cuda support, and Jupyter. It has been tested on Ubuntu 16.04. 
+This code requires Pytorch and torchvision 1.0.0 or higher with cuda support, and Jupyter. 
+
+It has been tested on Ubuntu 16.04. 
 
 You must download the iNat2017 dataset in order to construct meta-iNat. 
 Before running this code, please download and unpack the iNat2017 training/validation images, and the training 
