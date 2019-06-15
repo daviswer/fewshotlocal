@@ -69,11 +69,11 @@ class fPredict(nn.Module):
         inp = inp.view(way, self.shot, inp.size(-1)) # w s d
         centroids = inp.mean(1).unsqueeze(0).unsqueeze(0) # 1 1 w d
         support = inp.unsqueeze(2) # w s 1 d
-        eye = torch.eye(way).cuda()
-        rescaler = (eye/(self.shot-1) + 1).unsqueeze(1).unsqueeze(-1) # w 1 w 1
+        eye = torch.eye(way).cuda().unsqueeze(1).unsqueeze(-1) # w 1 w 1
+        rescaler = (eye/(self.shot-1) + 1)
         # Fold out the contribution of each point from its corresponding centroid
-        centroids = (centroids - inp.unsqueeze(2)*eye.unsqueeze(1).unsqueeze(-1)/self.shot) * rescaler # w s w d
-        return predict(centroids, inp)
+        centroids = (centroids - support*eye/self.shot) * rescaler # w s w d
+        return predict(centroids, support)
         
 
 #-----------FEATURE EXPANDERS AND POOLING OPERATIONS
