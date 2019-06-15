@@ -72,7 +72,7 @@ class fPredict(nn.Module):
         eye = torch.eye(way).cuda()
         rescaler = (eye/(self.shot-1) + 1).unsqueeze(1).unsqueeze(-1) # w 1 w 1
         # Fold out the contribution of each point from its corresponding centroid
-        centroids = (centroids - inp*eye.unsqueeze(1).unsqueeze(-1)/self.shot) * rescaler # w s w d
+        centroids = (centroids - inp.unsqueeze(2)*eye.unsqueeze(1).unsqueeze(-1)/self.shot) * rescaler # w s w d
         return predict(centroids, inp)
         
 
