@@ -108,5 +108,5 @@ def train(train_loader, models, optimizer, criterion, way, shots, verbosity):
             acctracker[j] += acc
         if i%verbosity == 0:
             print('%d of approx. 192270'%(i*way*sum(shots)))
-    return [L/i for L in allloss], [L/i for L in acctracker]
+    return [L/(i+1) for L in allloss], [L/(i+1) for L in acctracker]
 
