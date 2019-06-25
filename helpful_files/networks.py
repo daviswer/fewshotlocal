@@ -142,7 +142,7 @@ class pL(nn.Module):
         masks = self.sm(masks)
         # Perform fore/back separation 
         bsize = masks.view(*masks.size()[:-2], -1).sum(-1)+.01
-        out = (inp.unsqueeze(2)*masks).view(inp.size(0), inp.size(1), 2, -1).sum(-1)/bsize # B 64 2 100
+        out = (inp.unsqueeze(2)*masks).view(inp.size(0), inp.size(1), 2, -1).sum(-1)/bsize # B 64 2
         return out.view(out.size(0), out.size(1)*2)
     
     
