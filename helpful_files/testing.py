@@ -213,9 +213,9 @@ def score(k, centroids, bcentroids, models, loader, expanders, way):
         count += inp.size(0)
 
     # Record last category
+    allcount += count
     for j in range(esize):
         allright[j] += right[j]
-        allcount += count
         perclassacc[j, catindex] = right[j]/count
 
     # Final reporting / recording
