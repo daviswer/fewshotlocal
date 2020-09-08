@@ -132,10 +132,10 @@ def ufL(inp, m, way, bshot, covariancing):
     
 # Parametric localizer
 class pL(nn.Module):
-    def __init__(self):
+    def __init__(self, w):
         super(pL, self).__init__()
         self.sm = nn.Softmax(dim=2)
-        self.centroids = Parameter(torch.randn(1,64,2,1,1))
+        self.centroids = Parameter(torch.randn(1,w,2,1,1))
         
     def forward(self, inp, _, __):
         masks = torch.sum((inp.unsqueeze(2)-self.centroids)**2, 1).neg().unsqueeze(1) # B 1 2 10 10
@@ -148,10 +148,10 @@ class pL(nn.Module):
     
 # Parametric localizer with covariance pooling
 class pCL(nn.Module):
-    def __init__(self):
+    def __init__(self, w):
         super(pCL, self).__init__()
         self.sm = nn.Softmax(dim=2)
-        self.centroids = Parameter(torch.randn(1,64,2,1,1))
+        self.centroids = Parameter(torch.randn(1,w,2,1,1))
         
     def forward(self, inp, _, __):
         b = inp.size(0)
@@ -237,7 +237,7 @@ class Network(nn.Module):
                 self.postprocess = lambda x,y,z: ufL(x,y,z, shots[0], cova) # unfolded Localizer
         else:
             # 021 and 121, and 020 and 120
-            self.postprocess = pCL() if cova else pL() # parametric Localizer
+            self.postprocess = pCL(w) if cova else pL(w) # parametric Localizer
             
         if folding:
             self.predict = fPredict(shots[0]) # Folded prediction
