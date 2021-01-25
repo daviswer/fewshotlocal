@@ -4,6 +4,17 @@ Code for the CVPR 2019 paper [Few-Shot Learning with Localization in Realistic S
 Due to the sheer number of independent moving parts and user-defined parameters, we are providing our code as a series of 
 interactive Jupyter notebooks rather than automated Python scripts. 
 
+If you use any of this code for your work, please cite the following:
+```
+@InProceedings{Wertheimer_2019_CVPR,
+  author = {Wertheimer, Davis and Hariharan, Bharath},
+  title = {Few-Shot Learning With Localization in Realistic Settings},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month = {June},
+  year = {2019}
+}
+```
+
 ## Setup
 
 This code requires Pytorch and torchvision 1.0.0 or higher with cuda support, and Jupyter. 
@@ -38,3 +49,4 @@ Because two versions of localization exist, we use ‘0’ to indicate no locali
 A ‘*’ indicates a model presented in the main paper.
 
 <img src="https://raw.githubusercontent.com/daviswer/fewshotlocal/master/results.png" width="500">
+
