@@ -8,7 +8,7 @@ class Block(nn.Module):
     def __init__(self, insize, outsize):
         super(Block, self).__init__()
         self.layers = nn.Sequential(
-            nn.Conv2d(insize, outsize, kernel_size=3, padding=1),
+            nn.Conv2d(insize, outsize, kernel_size=3, padding=1,bias=False),
             nn.BatchNorm2d(outsize)
         )
         
