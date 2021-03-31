@@ -209,7 +209,7 @@ def score(k, centroids, bcentroids, models, loader, expanders, way):
                 out = predict(centroids[j].unsqueeze(0), out.unsqueeze(1))
                 _, pred = out.topk(k, 1, True, True)
                 pred = pred.t()
-                right[j] += pred.eq(targ.view(1, -1).expand_as(pred))[:k].view(-1).sum(0, keepdim=True).float().item()
+                right[j] += pred.eq(targ.view(1, -1).expand_as(pred)).contiguous()[:k].view(-1).sum(0, keepdim=True).float().item()
         count += inp.size(0)
 
     # Record last category
