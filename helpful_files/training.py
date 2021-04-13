@@ -7,7 +7,7 @@ from torch.utils.data import Sampler
 
 def load_transform(path, boxdict, transform, flipping, masking):
     # Load the image
-    flip = np.random.choice([True, False])
+    flip = (torch.rand(1)>.5).item()
     with open(path, 'rb') as f:
         p = Image.open(f)
         p = p.convert('RGB')
