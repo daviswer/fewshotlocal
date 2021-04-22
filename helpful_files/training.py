@@ -19,6 +19,7 @@ def load_transform(path, boxdict, transform, flipping, masking):
     if masking:
         allmasks = np.zeros((10,10))
         file = path[path.rfind(os.path.sep,0,path.rfind(os.path.sep))+1:]
+        file = file[:file.rfind(os.path.sep)]+'/'+file[file.rfind(os.path.sep)+1:]
         boxes = boxdict[file]
         for box in boxes:
             mask = np.zeros((10,10))
