@@ -4,7 +4,7 @@ Code for the CVPR 2019 paper [Few-Shot Learning with Localization in Realistic S
 Due to the sheer number of independent moving parts and user-defined parameters, we are providing our code as a series of 
 interactive Jupyter notebooks rather than automated Python scripts. 
 
-If you use any of this code for your work, please cite the following:
+If you find this code or paper useful to your research work, please consider citing it using the following bibtex:
 ```
 @InProceedings{Wertheimer_2019_CVPR,
   author = {Wertheimer, Davis and Hariharan, Bharath},
@@ -21,15 +21,22 @@ This code requires Pytorch and torchvision 1.0.0 or higher with cuda support, an
 
 It has been tested on Ubuntu 16.04. 
 
-You must download the iNat2017 dataset in order to construct meta-iNat. 
-Before running this code, please download and unpack the iNat2017 training/validation images, and the training 
-bounding box annotations, to a directory of your choice. The images and bounding box annotations can be found 
+The meta-iNat and tiered meta-iNat ("Supercategory meta-iNat") datasets can be downloaded from 
+[here](https://drive.google.com/file/d/1ATRnifcZ7-_7YxXbKbCi6mL61hfk_YEJ/view?usp=sharing), 
+or constructed manually.
+
+To construct meta-iNat from scratch, you must download the iNat2017 dataset. 
+Download and unpack the iNat2017 training/validation images, and the training bounding box annotations, 
+to a directory of your choice. 
+The images and bounding box annotations can be found 
 [here](https://github.com/visipedia/inat_comp/blob/master/2017/README.md#Data). 
 
 ## Running the Scripts
 
-Begin by running the Setup notebook, which constructs the meta-iNat dataset or a variant according to user-defined parameters. 
+If you are constructing meta-iNat from scratch, begin by running the Setup notebook, 
+which constructs the meta-iNat dataset or a variant according to user-defined parameters. 
 The default parameters reproduce the meta-iNat dataset used in the paper. 
+If you downloaded meta-iNat directly, you can skip this step.
 
 The Train notebook trains an ensemble of learners in parallel, according to user-defined parameters. 
 The default parameters reproduce the best-performing model in the paper 
