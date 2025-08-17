@@ -22,7 +22,7 @@ This code requires Pytorch and torchvision 1.0.0 or higher with cuda support, an
 It has been tested on Ubuntu 16.04. 
 
 The meta-iNat and tiered meta-iNat ("Supercategory meta-iNat") datasets can be downloaded from 
-[here](https://drive.google.com/file/d/1I8vdg1EV04a_4EYNEX_rKkrOKnavBQAM/view?usp=sharing), 
+[here](https://1drv.ms/u/c/1ecb0a114765c4bb/ET8f4OZs6S5Jj5HDBytUuSYBF0qsRz7Q-FbGp4iU2lKAnQ?e=lTyI31), 
 or constructed manually.
 
 To construct meta-iNat from scratch, you must download the iNat2017 dataset. 
